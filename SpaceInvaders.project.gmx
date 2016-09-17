@@ -8,11 +8,20 @@
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_shot</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_move_player.gml</script>
+    <script>scripts\scr_init_game.gml</script>
+    <script>scripts\scr_player_shoot.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
+    <object>objects\obj_control</object>
+    <object>objects\obj_enemy</object>
+    <object>objects\obj_shot</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_level0</room>
