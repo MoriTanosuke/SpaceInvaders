@@ -8,6 +8,36 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// check if game is lost or won
+// count enemies
+var enemies = instance_number(obj_enemy);
+if(enemies == 0) {
+  // change room, game won
+  game_restart();
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="2">
       <action>
         <libid>1</libid>
@@ -27,22 +57,6 @@
             <kind>1</kind>
             <string>/// initialize game
 script_execute(scr_init_game);
-
-var max_rows = 5;
-var max_cols = 10;
-
-// create enemies
-var curx = 30;//room_width / 4;
-var cury = 30;//2 * spr_enemy.sprite_height;
-for(var i = 0;i &lt; max_rows;i++) {
-    for(var j = 0;j &lt; max_cols;j++) {
-        var instance = instance_create(curx, cury, obj_enemy);
-        curx += 1.5 * instance.sprite_width;
-    }
-    curx = 30;//room_width / 4;
-    cury += 1.5 * instance.sprite_height;
-}
-
 </string>
           </argument>
         </arguments>

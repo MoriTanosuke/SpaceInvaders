@@ -17,14 +17,19 @@
     <script>scripts\scr_init_game.gml</script>
     <script>scripts\scr_player_shoot.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_default</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_control</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_shot</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_level0</room>
+    <room>rooms\rm_Menu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
